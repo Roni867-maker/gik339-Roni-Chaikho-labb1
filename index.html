@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIK339 Labb 1 - JavaScript intro, variabler och funktioner</title>
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <main>
+    <h1>Välkommen till GIK339 Labb 1!</h1>
+    </main>
+</body>
+</html>
+
+<!--
+Reflektion uppgift 1:
+1. Beskriver vilken betydelse placeringen av <script>-taggen har.
+   
+   Placeringen av <script>-taggen är viktig eftersom den styr när JavaScript-koden exekveras i förhållande till HTML-parsningen.
+   Placering i <head> (utan `defer` eller `async`):Blockerar renderingen av resten av sidan tills skriptet har laddats och körts. Detta kan leda till en långsam användarupplevelse.
+   Placering i slutet av <body>: Detta är en vanlig rekommendation om man inte använder `defer` eller `async`. HTML-innehållet renderas först, och skriptet körs sist, 
+   vilket säkerställer att alla DOM-element är tillgängliga för skriptet att manipulera.
+   Placering i <head> med `defer`.
+
+2. Beskriver hur attributet defer fungerar.
+
+   `defer` är ett booleskt attribut som säger åt webbläsaren att ladda skriptfilen i bakgrunden samtidigt som den fortsätter att parsa HTML-dokumentet. Skriptet körs eller exekveras dock först när hela HTML-dokumentet har parsats färdigt. 
+   Detta är fördelaktigt eftersom det:
+   Förhindrar att renderingen blockeras.
+   Garanterar att skriptet körs i den ordning det är deklarerat.
+   Säkerställer att hela DOM-trädet är tillgängligt när skriptet exekveras, likt att placera det i slutet av `<body>`.
+-->
